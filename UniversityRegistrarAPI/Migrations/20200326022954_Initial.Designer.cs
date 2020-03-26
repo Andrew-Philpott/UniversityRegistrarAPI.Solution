@@ -9,7 +9,7 @@ using UniversityRegistrar.Models;
 namespace UniversityRegistrarAPI.Migrations
 {
     [DbContext(typeof(UniversityRegistrarContext))]
-    [Migration("20200325222406_Initial")]
+    [Migration("20200326022954_Initial")]
     partial class Initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -31,9 +31,8 @@ namespace UniversityRegistrarAPI.Migrations
                     b.Property<string>("Name")
                         .HasColumnType("nvarchar(100)");
 
-                    b.Property<string>("Number")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(100)");
+                    b.Property<int>("Number")
+                        .HasColumnType("int");
 
                     b.HasKey("CourseId");
 

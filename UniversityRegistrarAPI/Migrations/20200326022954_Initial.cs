@@ -28,7 +28,7 @@ namespace UniversityRegistrarAPI.Migrations
                         .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
                     DepartmentId = table.Column<int>(nullable: false),
                     Name = table.Column<string>(type: "nvarchar(100)", nullable: true),
-                    Number = table.Column<string>(type: "nvarchar(100)", nullable: false)
+                    Number = table.Column<int>(nullable: false)
                 },
                 constraints: table =>
                 {
